@@ -1,0 +1,486 @@
+/* =========================================
+   DARK COMMAND CENTRE THEME
+   ========================================= */
+
+body {
+  background: #08111f;
+}
+
+/* =========================================
+   TOP HEADER
+   ========================================= */
+
+.top-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  left: 230px;
+
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 22px;
+
+  background: #0d1728;
+
+  border-bottom: 1px solid #1e293b;
+
+  z-index: 900;
+}
+
+/* =========================================
+   HEADER LEFT
+   ========================================= */
+
+.header-left {
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  min-width: 0;
+}
+
+.menu-toggle {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #263449;
+  border-radius: 8px;
+
+  background: #111c2d;
+
+  color: #94a3b8;
+}
+
+.menu-toggle:hover {
+  color: #38bdf8;
+  border-color: #0e7490;
+}
+
+/* =========================================
+   HEADER SEARCH
+   ========================================= */
+
+.header-search {
+  width: min(450px, 45vw);
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 0 11px;
+
+  border: 1px solid #263449;
+  border-radius: 8px;
+
+  background: #111c2d;
+
+  color: #64748b;
+}
+
+.header-search:focus-within {
+  border-color: #0891b2;
+
+  box-shadow:
+    0 0 0 2px rgba(8, 145, 178, 0.12);
+}
+
+.header-search input {
+  flex: 1;
+
+  min-width: 0;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #e2e8f0;
+
+  font-size: 12px;
+}
+
+.header-search input::placeholder {
+  color: #64748b;
+}
+
+.header-search-shortcut {
+  padding: 3px 7px;
+
+  border: 1px solid #334155;
+
+  border-radius: 4px;
+
+  color: #64748b;
+
+  font-size: 9px;
+}
+
+/* =========================================
+   HEADER RIGHT
+   ========================================= */
+
+.header-right {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+/* =========================================
+   DATE
+   ========================================= */
+
+.header-date {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 6px 10px;
+
+  border: 1px solid #263449;
+  border-radius: 8px;
+
+  background: #111c2d;
+}
+
+.header-date-icon {
+  width: 31px;
+  height: 31px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #12304a;
+
+  color: #38bdf8;
+}
+
+.header-date div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-date span {
+  font-size: 9px;
+  color: #94a3b8;
+}
+
+.header-date strong {
+  margin-top: 2px;
+
+  font-size: 10px;
+
+  color: #e2e8f0;
+}
+
+/* =========================================
+   HEADER ICON BUTTON
+   ========================================= */
+
+.header-icon-button {
+  position: relative;
+
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #263449;
+  border-radius: 8px;
+
+  background: #111c2d;
+
+  color: #94a3b8;
+}
+
+.header-icon-button:hover {
+  color: #38bdf8;
+
+  border-color: #0e7490;
+}
+
+.notification-count {
+  position: absolute;
+
+  top: -5px;
+  right: -4px;
+
+  min-width: 16px;
+  height: 16px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+
+  color: white;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  border: 2px solid #0d1728;
+}
+
+/* =========================================
+   DIVIDER
+   ========================================= */
+
+.header-divider {
+  width: 1px;
+  height: 30px;
+
+  margin: 0 5px;
+
+  background: #263449;
+}
+
+/* =========================================
+   PROFILE
+   ========================================= */
+
+.header-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 4px 5px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #94a3b8;
+}
+
+.header-profile:hover {
+  color: #e2e8f0;
+}
+
+.profile-avatar {
+  position: relative;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #06b6d4
+  );
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.profile-avatar i {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
+  width: 9px;
+  height: 9px;
+
+  border: 2px solid #0d1728;
+
+  border-radius: 50%;
+
+  background: #22c55e;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+
+  text-align: left;
+}
+
+.profile-info strong {
+  font-size: 11px;
+
+  color: #e2e8f0;
+}
+
+.profile-info span {
+  margin-top: 2px;
+
+  font-size: 9px;
+
+  color: #64748b;
+}
+
+/* =========================================
+   RESPONSIVE HEADER
+   ========================================= */
+
+@media (max-width: 1100px) {
+  .header-date {
+    display: none;
+  }
+
+  .header-search {
+    width: min(400px, 45vw);
+  }
+}
+
+@media (max-width: 800px) {
+  .top-header {
+    left: 0;
+
+    padding: 0 15px;
+  }
+
+  .header-search {
+    width: 300px;
+  }
+
+  .profile-info {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-search {
+    display: none;
+  }
+
+  .header-right {
+    margin-left: auto;
+  }
+
+  .header-divider {
+    display: none;
+  }
+}
+/* =========================================
+   DASHBOARD LAYOUT
+   ========================================= */
+
+.dashboard-layout {
+  min-height: 100vh;
+
+  background: #08111f;
+}
+
+.dashboard-main {
+  min-height: 100vh;
+
+  margin-left: 230px;
+
+  background:
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(8, 145, 178, 0.05),
+      transparent 25%
+    ),
+    #08111f;
+}
+
+.dashboard-content {
+  padding: 92px 24px 30px;
+
+  min-height: 100vh;
+}
+
+/* =========================================
+   MOBILE SIDEBAR
+   ========================================= */
+
+.sidebar-wrapper {
+  position: relative;
+  z-index: 1000;
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+  .dashboard-main {
+    margin-left: 220px;
+  }
+
+  .dashboard-content {
+    padding: 90px 18px 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-main {
+    margin-left: 0;
+  }
+
+  .sidebar-wrapper {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    transform: translateX(-100%);
+
+    transition: transform 0.3s ease;
+
+    z-index: 1100;
+  }
+
+  .sidebar-wrapper.open {
+    transform: translateX(0);
+  }
+
+  .sidebar-wrapper .sidebar {
+    transform: none;
+  }
+
+  .sidebar-overlay {
+    display: block;
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    z-index: 1050;
+  }
+
+  .dashboard-content {
+    padding: 85px 14px 20px;
+  }
+}

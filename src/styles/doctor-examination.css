@@ -1,0 +1,332 @@
+
+.examination-page {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 24px;
+  color: #e7eef9;
+  box-sizing: border-box;
+}
+
+.examination-page * {
+  box-sizing: border-box;
+}
+
+.examination-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.examination-title-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  color: #38bdf8;
+  background: #10283b;
+  border: 1px solid #1d4058;
+  border-radius: 15px;
+  flex-shrink: 0;
+}
+
+.examination-eyebrow {
+  color: #38bdf8;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  font-weight: 700;
+}
+
+.examination-header h1 {
+  margin: 5px 0;
+  font-size: 27px;
+  color: #f8fafc;
+}
+
+.examination-header p,
+.examination-section-heading p {
+  margin: 4px 0 0;
+  color: #8290a5;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.examination-section {
+  background: #0d1727;
+  border: 1px solid #1b293b;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.examination-section-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  color: #38bdf8;
+  margin-bottom: 22px;
+}
+
+.examination-section-heading h2 {
+  color: #f1f5f9;
+  font-size: 17px;
+  margin: 0;
+}
+
+.examination-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.examination-form-grid.single-column {
+  grid-template-columns: 1fr;
+}
+
+.examination-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.examination-field > span {
+  color: #b9c7d9;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.examination-field input,
+.examination-field select,
+.examination-field textarea {
+  width: 100%;
+  min-width: 0;
+  background: #08111f;
+  color: #e7eef9;
+  border: 1px solid #26374d;
+  border-radius: 8px;
+  padding: 12px;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+}
+
+.examination-field input:focus,
+.examination-field select:focus,
+.examination-field textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.12);
+}
+
+.examination-field input::placeholder,
+.examination-field textarea::placeholder {
+  color: #62738a;
+}
+
+.examination-field textarea {
+  resize: vertical;
+  line-height: 1.6;
+}
+
+.examination-field small {
+  color: #8290a5;
+  font-size: 11px;
+}
+
+.examination-temperature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 90px;
+  gap: 8px;
+}
+
+.examination-patient-summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  background: #10283b;
+  border: 1px solid #1d4058;
+  border-radius: 9px;
+  padding: 13px;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+.examination-patient-summary strong {
+  color: #38bdf8;
+}
+
+.examination-patient-summary span {
+  color: #a8b7ca;
+}
+
+.examination-form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+.examination-form-footer p {
+  color: #8290a5;
+  font-size: 12px;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.examination-save-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  border: 1px solid #0ea5e9;
+  background: #0284c7;
+  color: #ffffff;
+  border-radius: 9px;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.examination-save-button:hover:not(:disabled) {
+  background: #0369a1;
+}
+
+.examination-save-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.examination-message {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 15px;
+  margin-bottom: 18px;
+  border-radius: 9px;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+
+.examination-message.error {
+  color: #ff9a9a;
+  background: #351b24;
+  border: 1px solid #71313e;
+}
+
+.examination-message.success {
+  color: #6ee7b7;
+  background: #0e2b28;
+  border: 1px solid #1d5547;
+}
+
+.examination-empty {
+  padding: 22px;
+  text-align: center;
+  color: #8290a5;
+  background: #08111f;
+  border: 1px dashed #26374d;
+  border-radius: 9px;
+  font-size: 13px;
+}
+
+.examination-history-card {
+  background: #08111f;
+  border: 1px solid #1b293b;
+  border-radius: 10px;
+  padding: 17px;
+  margin-top: 14px;
+  overflow-wrap: anywhere;
+}
+
+.examination-history-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.examination-history-top > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.examination-history-top strong {
+  color: #f1f5f9;
+  font-size: 14px;
+}
+
+.examination-history-top span,
+.examination-history-card > p {
+  color: #8290a5;
+  font-size: 12px;
+}
+
+.examination-recorded-badge {
+  color: #6ee7b7 !important;
+  background: #0e2b28;
+  border: 1px solid #1d5547;
+  border-radius: 20px;
+  padding: 5px 9px;
+  white-space: nowrap;
+}
+
+.examination-history-vitals {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.examination-history-vitals span {
+  background: #0d1727;
+  border: 1px solid #1b293b;
+  padding: 10px;
+  border-radius: 7px;
+  color: #cbd5e1;
+  font-size: 12px;
+}
+
+.examination-history-card > p {
+  line-height: 1.7;
+}
+
+.examination-history-card > p strong {
+  color: #b9c7d9;
+}
+
+@media (max-width: 700px) {
+  .examination-page {
+    padding: 14px;
+  }
+
+  .examination-section {
+    padding: 16px;
+  }
+
+  .examination-form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .examination-form-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .examination-save-button {
+    width: 100%;
+  }
+
+  .examination-history-vitals {
+    grid-template-columns: 1fr;
+  }
+
+  .examination-header h1 {
+    font-size: 22px;
+  }
+}

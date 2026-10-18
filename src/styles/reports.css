@@ -1,0 +1,1110 @@
+/* =========================================================
+   REPORTS & ANALYTICS
+   AI HOSPITAL COMMAND CENTRE
+========================================================= */
+
+.reports-page {
+  color: #e7eef8;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.reports-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 18px;
+}
+
+.reports-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.reports-title-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+  border: 1px solid rgba(56, 189, 248, 0.18);
+}
+
+.reports-title-row h1 {
+  margin: 0;
+  color: #edf4fa;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.reports-title-row p {
+  margin: 5px 0 0;
+  color: #71829a;
+  font-size: 13px;
+}
+
+.reports-live-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 13px;
+  border: 1px solid rgba(52, 211, 153, 0.18);
+  border-radius: 9px;
+  background: rgba(52, 211, 153, 0.06);
+  color: #34d399;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.7px;
+}
+
+.reports-live-status span {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.7);
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.reports-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.reports-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-height: 90px;
+  padding: 16px;
+  background: #0d1727;
+  border: 1px solid #1b293b;
+  border-radius: 13px;
+  transition: 0.2s ease;
+}
+
+.reports-stat-card:hover {
+  border-color: #29405a;
+  transform: translateY(-1px);
+}
+
+.reports-stat-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 11px;
+}
+
+.reports-stat-icon.blue {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.reports-stat-icon.green {
+  color: #34d399;
+  background: rgba(52, 211, 153, 0.1);
+}
+
+.reports-stat-icon.orange {
+  color: #fb923c;
+  background: rgba(251, 146, 60, 0.1);
+}
+
+.reports-stat-icon.red {
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.reports-stat-card span {
+  display: block;
+  margin-bottom: 4px;
+  color: #8290a5;
+  font-size: 11px;
+}
+
+.reports-stat-card strong {
+  display: block;
+  color: #f2f7fc;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.reports-stat-card small {
+  display: block;
+  margin-top: 5px;
+  color: #5f7188;
+  font-size: 10px;
+}
+
+/* =========================
+   MAIN GRID
+========================= */
+
+.reports-main-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(330px, 0.85fr);
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.reports-panel {
+  padding: 18px;
+  background: #0d1727;
+  border: 1px solid #1b293b;
+  border-radius: 13px;
+}
+
+.reports-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.reports-panel-header h2 {
+  margin: 0;
+  color: #e8eff7;
+  font-size: 15px;
+}
+
+.reports-panel-header p {
+  margin: 5px 0 0;
+  color: #65778e;
+  font-size: 10px;
+}
+
+.reports-panel-header > svg {
+  color: #38bdf8;
+}
+
+.reports-panel-badge {
+  padding: 6px 9px;
+  border: 1px solid #22344a;
+  border-radius: 6px;
+  background: #111f31;
+  color: #7e91a8;
+  font-size: 9px;
+}
+
+/* =========================
+   CHART
+========================= */
+
+.reports-chart {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.reports-chart .recharts-cartesian-grid-horizontal line,
+.reports-chart .recharts-cartesian-grid-vertical line {
+  stroke: #1b293b;
+}
+
+.reports-chart .recharts-default-tooltip {
+  background: #101c2d;
+}
+
+/* =========================
+   PIE CHART
+========================= */
+
+.reports-pie-wrapper {
+  position: relative;
+  width: 100%;
+  height: 220px;
+}
+
+.reports-pie-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.reports-pie-center strong {
+  color: #eaf2f8;
+  font-size: 22px;
+}
+
+.reports-pie-center span {
+  margin-top: 2px;
+  color: #60738a;
+  font-size: 9px;
+}
+
+.reports-status-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 16px;
+  margin-top: -3px;
+}
+
+.reports-status-list > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid #18263a;
+}
+
+.reports-status-list span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #73859b;
+  font-size: 9px;
+}
+
+.reports-status-list i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.reports-status-list strong {
+  color: #cbd7e4;
+  font-size: 10px;
+}
+
+/* =========================
+   WEEKLY
+========================= */
+
+.reports-weekly-panel {
+  margin-bottom: 14px;
+}
+
+/* =========================
+   DEPARTMENT
+========================= */
+
+.reports-department-filter {
+  height: 34px;
+  min-width: 155px;
+  padding: 0 9px;
+  border: 1px solid #22344a;
+  border-radius: 7px;
+  outline: none;
+  background: #101d2d;
+  color: #8fa1b6;
+  font-size: 9px;
+}
+
+.reports-department-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.reports-department-card {
+  padding: 13px;
+  border: 1px solid #1b2a3e;
+  border-radius: 10px;
+  background: #101c2d;
+}
+
+.reports-department-top {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.reports-department-icon {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.reports-department-top > div:nth-child(2) {
+  min-width: 0;
+  flex: 1;
+}
+
+.reports-department-top strong {
+  display: block;
+  overflow: hidden;
+  color: #cbd7e3;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reports-department-top small {
+  display: block;
+  margin-top: 3px;
+  color: #53667e;
+  font-size: 8px;
+}
+
+.reports-department-top > span {
+  color: #34d399;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reports-department-stat {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.reports-department-stat div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reports-department-stat span {
+  color: #5d7087;
+  font-size: 8px;
+}
+
+.reports-department-stat strong {
+  color: #cbd7e3;
+  font-size: 11px;
+}
+
+.reports-performance-bar {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  margin-top: 13px;
+  border-radius: 10px;
+  background: #182639;
+}
+
+.reports-performance-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #38bdf8;
+}
+
+.reports-performance-label {
+  display: block;
+  margin-top: 5px;
+  color: #4f6279;
+  font-size: 7px;
+}
+
+/* =========================
+   SECONDARY GRID
+========================= */
+
+.reports-secondary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+/* =========================
+   DOCTOR PERFORMANCE
+========================= */
+
+.reports-doctor-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.reports-doctor-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 10px;
+  border: 1px solid #1b2a3e;
+  border-radius: 8px;
+  background: #101c2d;
+}
+
+.reports-doctor-rank {
+  width: 24px;
+  height: 24px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 6px;
+  background: #142438;
+  color: #38bdf8;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.reports-doctor-info {
+  min-width: 0;
+  flex: 1;
+}
+
+.reports-doctor-info strong {
+  display: block;
+  overflow: hidden;
+  color: #cbd7e3;
+  font-size: 9px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.reports-doctor-info small {
+  display: block;
+  margin-top: 3px;
+  color: #53667e;
+  font-size: 8px;
+}
+
+.reports-doctor-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #facc15;
+}
+
+.reports-doctor-rating strong {
+  font-size: 9px;
+}
+
+.reports-doctor-efficiency {
+  min-width: 35px;
+  color: #34d399;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* =========================
+   BED OCCUPANCY
+========================= */
+
+.reports-bed-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.reports-bed-item {
+  padding: 10px 11px;
+  border: 1px solid #1b2a3e;
+  border-radius: 8px;
+  background: #101c2d;
+}
+
+.reports-bed-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reports-bed-row span {
+  color: #a1afbf;
+  font-size: 9px;
+}
+
+.reports-bed-row strong {
+  color: #dce6ef;
+  font-size: 10px;
+}
+
+.reports-bed-bar {
+  width: 100%;
+  height: 5px;
+  overflow: hidden;
+  margin-top: 8px;
+  border-radius: 10px;
+  background: #182639;
+}
+
+.reports-bed-bar span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: #38bdf8;
+}
+
+.reports-bed-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.reports-bed-meta small {
+  color: #53667e;
+  font-size: 7px;
+}
+
+/* =========================
+   PHARMACY
+========================= */
+
+.reports-pharmacy-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 14px;
+  padding: 17px 18px;
+  background: #0d1727;
+  border: 1px solid #1b293b;
+  border-radius: 13px;
+}
+
+.reports-pharmacy-left {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.reports-pharmacy-icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.reports-pharmacy-left h2 {
+  margin: 0;
+  color: #e5edf5;
+  font-size: 14px;
+}
+
+.reports-pharmacy-left p {
+  margin: 4px 0 0;
+  color: #61748a;
+  font-size: 9px;
+}
+
+.reports-pharmacy-stats {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.reports-pharmacy-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reports-pharmacy-stats span {
+  color: #5d7087;
+  font-size: 8px;
+}
+
+.reports-pharmacy-stats strong {
+  color: #dce6ef;
+  font-size: 12px;
+}
+
+.reports-pharmacy-stats .green strong {
+  color: #34d399;
+}
+
+.reports-pharmacy-stats .orange strong {
+  color: #fb923c;
+}
+
+.reports-pharmacy-stats .red strong {
+  color: #ef4444;
+}
+
+/* =========================
+   REPORT LIBRARY
+========================= */
+
+.reports-library {
+  overflow: hidden;
+  margin-top: 14px;
+  background: #0d1727;
+  border: 1px solid #1b293b;
+  border-radius: 13px;
+}
+
+.reports-library-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 18px 18px 14px;
+}
+
+.reports-library-header h2 {
+  margin: 0;
+  color: #e7eef6;
+  font-size: 15px;
+}
+
+.reports-library-header p {
+  margin: 5px 0 0;
+  color: #63758b;
+  font-size: 10px;
+}
+
+.reports-library-count {
+  padding: 7px 10px;
+  border: 1px solid #22344a;
+  border-radius: 7px;
+  background: #111f31;
+  color: #8092a8;
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.reports-search {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 37px;
+  margin: 0 18px 15px;
+  padding: 0 11px;
+  border: 1px solid #1c2b3f;
+  border-radius: 8px;
+  background: #091321;
+}
+
+.reports-search svg {
+  color: #60738a;
+}
+
+.reports-search input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  color: #dce6ef;
+  font-size: 10px;
+}
+
+.reports-search input::placeholder {
+  color: #506178;
+}
+
+.reports-library-list {
+  border-top: 1px solid #17263a;
+}
+
+.reports-library-item {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 11px 18px;
+  border-bottom: 1px solid #152337;
+}
+
+.reports-library-item:last-child {
+  border-bottom: 0;
+}
+
+.reports-library-icon {
+  width: 33px;
+  height: 33px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 8px;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+}
+
+.reports-library-info {
+  min-width: 220px;
+  flex: 1;
+}
+
+.reports-library-info strong {
+  display: block;
+  color: #cbd7e3;
+  font-size: 9px;
+}
+
+.reports-library-info small {
+  display: block;
+  margin-top: 3px;
+  color: #53667e;
+  font-size: 8px;
+}
+
+.reports-library-date {
+  min-width: 145px;
+}
+
+.reports-library-date span {
+  display: block;
+  color: #53667e;
+  font-size: 7px;
+}
+
+.reports-library-date strong {
+  display: block;
+  margin-top: 3px;
+  color: #8597ab;
+  font-size: 8px;
+}
+
+.reports-ready {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 55px;
+  color: #34d399;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.reports-ready i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 7px rgba(52, 211, 153, 0.5);
+}
+
+.reports-library-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.reports-library-actions button {
+  width: 29px;
+  height: 29px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #24354a;
+  border-radius: 6px;
+  background: #101d2d;
+  color: #71859b;
+  cursor: pointer;
+  transition: 0.18s ease;
+}
+
+.reports-library-actions button:hover {
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.35);
+}
+
+/* =========================
+   EMPTY
+========================= */
+
+.reports-empty {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.reports-empty svg {
+  color: #40546b;
+}
+
+.reports-empty h3 {
+  margin: 10px 0 4px;
+  color: #a8b6c6;
+  font-size: 13px;
+}
+
+.reports-empty p {
+  margin: 0;
+  color: #53667d;
+  font-size: 9px;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.reports-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: rgba(2, 8, 15, 0.78);
+  backdrop-filter: blur(5px);
+}
+
+.reports-modal {
+  position: relative;
+  width: min(520px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 23px;
+  border: 1px solid #24364c;
+  border-radius: 16px;
+  background: #0d1727;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.45);
+}
+
+.reports-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #24354a;
+  border-radius: 8px;
+  background: #101d2d;
+  color: #8192a7;
+  cursor: pointer;
+}
+
+.reports-modal-close:hover {
+  color: #fff;
+  border-color: #3a506a;
+}
+
+.reports-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding-right: 35px;
+}
+
+.reports-modal-icon {
+  width: 47px;
+  height: 47px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.1);
+}
+
+.reports-modal-header span {
+  color: #53667e;
+  font-size: 8px;
+}
+
+.reports-modal-header h2 {
+  margin: 3px 0;
+  color: #edf4fa;
+  font-size: 19px;
+}
+
+.reports-modal-header p {
+  margin: 0;
+  color: #71839a;
+  font-size: 9px;
+}
+
+.reports-modal-status {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0 15px;
+  padding: 11px 13px;
+  border: 1px solid #1c2b3f;
+  border-radius: 9px;
+  background: #091321;
+}
+
+.reports-modal-status span {
+  color: #718198;
+  font-size: 9px;
+}
+
+.reports-modal-status strong {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #34d399;
+  font-size: 9px;
+}
+
+.reports-modal-status i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+}
+
+.reports-modal-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+}
+
+.reports-modal-grid > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 11px;
+  border: 1px solid #1b2a3e;
+  border-radius: 8px;
+  background: #101c2d;
+}
+
+.reports-modal-grid > div > svg {
+  margin-top: 2px;
+  color: #38bdf8;
+}
+
+.reports-modal-grid span {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.reports-modal-grid small {
+  color: #586b82;
+  font-size: 7px;
+}
+
+.reports-modal-grid strong {
+  color: #cbd7e3;
+  font-size: 9px;
+}
+
+.reports-modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9px;
+  margin-top: 17px;
+}
+
+.reports-modal-actions button {
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid #24364c;
+  border-radius: 8px;
+  background: #111f31;
+  color: #8fa0b4;
+  font-size: 9px;
+  cursor: pointer;
+  transition: 0.18s ease;
+}
+
+.reports-modal-actions button:hover {
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.35);
+  background: rgba(56, 189, 248, 0.06);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1150px) {
+  .reports-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reports-main-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-department-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .reports-pharmacy-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reports-pharmacy-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 750px) {
+  .reports-page-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reports-title-row h1 {
+    font-size: 20px;
+  }
+
+  .reports-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-department-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-secondary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-pharmacy-stats {
+    flex-wrap: wrap;
+    gap: 14px 25px;
+  }
+
+  .reports-library-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .reports-library-info {
+    min-width: 180px;
+  }
+
+  .reports-library-date {
+    min-width: 130px;
+  }
+
+  .reports-modal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-modal-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .reports-panel {
+    padding: 14px;
+  }
+
+  .reports-panel-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .reports-department-filter {
+    width: 100%;
+  }
+
+  .reports-status-list {
+    grid-template-columns: 1fr;
+  }
+
+  .reports-pharmacy-left {
+    align-items: flex-start;
+  }
+}

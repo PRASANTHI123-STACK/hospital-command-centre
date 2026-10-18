@@ -1,0 +1,593 @@
+
+.patient-appointments-page {
+  min-height: 100vh;
+  background: #08111f;
+  color: #e8f1fb;
+}
+
+.patient-appointments-header {
+  min-height: 70px;
+  padding: 14px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  background: #0d1727;
+  border-bottom: 1px solid #1b293b;
+}
+
+.patient-appointments-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.patient-appointments-brand-icon,
+.patient-appointments-title-icon {
+  display: grid;
+  place-items: center;
+  color: #38bdf8;
+  background: #102438;
+  border: 1px solid #1b3a50;
+  border-radius: 10px;
+}
+
+.patient-appointments-brand-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.patient-appointments-brand strong,
+.patient-appointments-brand span {
+  display: block;
+}
+
+.patient-appointments-brand strong {
+  color: #38bdf8;
+  font-size: 11px;
+  letter-spacing: 1.2px;
+}
+
+.patient-appointments-brand span {
+  margin-top: 4px;
+  color: #8290a5;
+  font-size: 9px;
+}
+
+.patient-appointments-back,
+.patient-appointments-refresh {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 13px;
+  border: 1px solid #29384b;
+  border-radius: 8px;
+  background: #101c2d;
+  color: #cbd8e7;
+  cursor: pointer;
+}
+
+.patient-appointments-back:hover,
+.patient-appointments-refresh:hover {
+  border-color: #38bdf8;
+  color: #38bdf8;
+}
+
+.patient-appointments-refresh:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.patient-appointments-main {
+  width: min(100% - 40px, 1050px);
+  margin: 0 auto;
+  padding: 35px 0 50px;
+}
+
+.patient-appointments-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.patient-appointments-title-icon {
+  width: 52px;
+  height: 52px;
+  flex-shrink: 0;
+}
+
+.patient-appointments-title p {
+  margin: 0 0 5px;
+  color: #38bdf8;
+  font-size: 9px;
+  letter-spacing: 1.4px;
+}
+
+.patient-appointments-title h1 {
+  margin: 0;
+  color: #edf5fc;
+  font-size: 27px;
+}
+
+.patient-appointments-title span {
+  display: block;
+  margin-top: 7px;
+  color: #8290a5;
+  font-size: 12px;
+}
+
+.patient-appointments-identity {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 20px;
+  margin-bottom: 22px;
+  border: 1px solid #1b293b;
+  border-radius: 12px;
+  background: #0d1727;
+}
+
+.patient-appointments-avatar {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  color: #38bdf8;
+  background: #102438;
+}
+
+.patient-appointments-identity span,
+.patient-appointments-identity strong,
+.patient-appointments-identity small {
+  display: block;
+}
+
+.patient-appointments-identity span,
+.patient-appointments-identity small {
+  color: #8290a5;
+  font-size: 10px;
+}
+
+.patient-appointments-identity strong {
+  margin: 4px 0;
+  color: #edf5fc;
+  font-size: 13px;
+}
+
+.patient-appointments-identity-note {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: auto;
+  color: #34d399;
+  font-size: 11px;
+}
+
+.patient-appointments-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
+  border-radius: 9px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.patient-appointments-alert svg {
+  flex-shrink: 0;
+}
+
+.patient-appointments-alert.error {
+  border: 1px solid #63323a;
+  background: #21151e;
+  color: #fda4af;
+}
+
+.patient-appointments-alert.success {
+  border: 1px solid #185743;
+  background: #0c251f;
+  color: #6ee7b7;
+}
+
+.patient-booking-card,
+.patient-my-appointments {
+  padding: 24px;
+  margin-bottom: 22px;
+  border: 1px solid #1b293b;
+  border-radius: 13px;
+  background: #0d1727;
+}
+
+.patient-booking-heading,
+.patient-my-appointments-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.patient-booking-heading h2,
+.patient-my-appointments-heading h2 {
+  margin: 0;
+  color: #edf5fc;
+  font-size: 18px;
+}
+
+.patient-booking-heading p,
+.patient-my-appointments-heading p {
+  margin: 7px 0 0;
+  color: #8290a5;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.patient-booking-step {
+  padding: 6px 9px;
+  border: 1px solid #1b3a50;
+  border-radius: 6px;
+  color: #38bdf8;
+  background: #102438;
+  font-size: 9px;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+}
+
+.patient-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.patient-booking-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  min-width: 0;
+}
+
+.patient-booking-field label {
+  color: #cbd8e7;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.patient-booking-field input,
+.patient-booking-field select,
+.patient-booking-field textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border: 1px solid #29384b;
+  border-radius: 8px;
+  outline: none;
+  background: #081321;
+  color: #e8f1fb;
+  font: inherit;
+  font-size: 12px;
+}
+
+.patient-booking-field input:focus,
+.patient-booking-field select:focus,
+.patient-booking-field textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgb(56 189 248 / 10%);
+}
+
+.patient-booking-field input:disabled,
+.patient-booking-field select:disabled {
+  opacity: 0.6;
+}
+
+.patient-booking-field input[type="date"] {
+  color-scheme: dark;
+}
+
+.patient-booking-field textarea {
+  resize: vertical;
+  min-height: 85px;
+}
+
+.patient-booking-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.patient-selected-doctor {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 14px;
+  border: 1px solid #1b3a50;
+  border-radius: 9px;
+  background: #0b1d2c;
+}
+
+.patient-selected-doctor-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #102438;
+  color: #38bdf8;
+}
+
+.patient-selected-doctor strong,
+.patient-selected-doctor span,
+.patient-selected-doctor small {
+  display: block;
+}
+
+.patient-selected-doctor strong {
+  color: #edf5fc;
+  font-size: 12px;
+}
+
+.patient-selected-doctor span {
+  margin-top: 5px;
+  color: #38bdf8;
+  font-size: 11px;
+}
+
+.patient-selected-doctor small {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+  color: #8290a5;
+  font-size: 10px;
+}
+
+.patient-booking-hint {
+  margin: 0;
+  padding: 13px;
+  border: 1px dashed #29384b;
+  border-radius: 8px;
+  color: #8290a5;
+  font-size: 11px;
+}
+
+.patient-time-slots {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.patient-time-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  min-height: 42px;
+  padding: 9px 6px;
+  border: 1px solid #29384b;
+  border-radius: 8px;
+  background: #101c2d;
+  color: #cbd8e7;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.patient-time-slot:hover:not(:disabled),
+.patient-time-slot.selected {
+  border-color: #38bdf8;
+  background: #102c40;
+  color: #7dd3fc;
+}
+
+.patient-time-slot.selected {
+  box-shadow: 0 0 0 1px #38bdf8 inset;
+}
+
+.patient-time-slot.booked,
+.patient-time-slot:disabled {
+  border-color: #49313a;
+  background: #21151e;
+  color: #a87882;
+  cursor: not-allowed;
+  text-decoration: line-through;
+}
+
+.patient-time-slot span {
+  width: 100%;
+  font-size: 9px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.patient-booking-submit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 46px;
+  padding: 12px 16px;
+  border: 1px solid #38bdf8;
+  border-radius: 8px;
+  background: #38bdf8;
+  color: #04111e;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.patient-booking-submit:hover:not(:disabled) {
+  background: #7dd3fc;
+}
+
+.patient-booking-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.patient-booking-disclaimer {
+  margin: -6px 0 0;
+  color: #8290a5;
+  font-size: 10px;
+  line-height: 1.7;
+}
+
+.patient-appointments-loading,
+.patient-appointments-loading-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 28px 12px;
+  color: #38bdf8;
+  font-size: 12px;
+}
+
+.patient-appointments-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 20px;
+  text-align: center;
+  color: #8290a5;
+}
+
+.patient-appointments-empty svg {
+  margin-bottom: 12px;
+  color: #38bdf8;
+}
+
+.patient-appointments-empty h3 {
+  margin: 0 0 8px;
+  color: #edf5fc;
+  font-size: 14px;
+}
+
+.patient-appointments-empty p {
+  margin: 0;
+  font-size: 11px;
+}
+
+.patient-appointment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.patient-appointment-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px;
+  border: 1px solid #1b293b;
+  border-radius: 9px;
+  background: #101c2d;
+}
+
+.patient-appointment-item-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #102438;
+  color: #38bdf8;
+}
+
+.patient-appointment-item-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.patient-appointment-item-info strong,
+.patient-appointment-item-info span,
+.patient-appointment-item-info small {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.patient-appointment-item-info strong {
+  color: #edf5fc;
+  font-size: 12px;
+}
+
+.patient-appointment-item-info span {
+  margin-top: 5px;
+  color: #38bdf8;
+  font-size: 10px;
+}
+
+.patient-appointment-item-info small {
+  margin-top: 5px;
+  color: #8290a5;
+  font-size: 10px;
+}
+
+.patient-appointment-status {
+  padding: 6px 8px;
+  border: 1px solid #1b3a50;
+  border-radius: 6px;
+  background: #102438;
+  color: #7dd3fc;
+  font-size: 9px;
+  white-space: nowrap;
+}
+
+.patient-appointment-status.confirmed,
+.patient-appointment-status.scheduled {
+  border-color: #185743;
+  background: #0c251f;
+  color: #6ee7b7;
+}
+
+.patient-appointment-status.urgent {
+  border-color: #63323a;
+  background: #21151e;
+  color: #fda4af;
+}
+
+@media (max-width: 700px) {
+  .patient-appointments-header {
+    padding: 13px 16px;
+  }
+
+  .patient-appointments-main {
+    width: calc(100% - 28px);
+    padding-top: 24px;
+  }
+
+  .patient-appointments-title h1 {
+    font-size: 22px;
+  }
+
+  .patient-booking-card,
+  .patient-my-appointments {
+    padding: 16px;
+  }
+
+  .patient-booking-row {
+    grid-template-columns: 1fr;
+  }
+
+  .patient-time-slots {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .patient-appointments-identity-note {
+    display: none;
+  }
+
+  .patient-appointment-item {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .patient-appointment-status {
+    margin-left: 56px;
+  }
+}
